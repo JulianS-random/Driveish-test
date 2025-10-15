@@ -1,0 +1,115 @@
+:root {
+  --bg: #0b0f14;
+  --ui: #0f1623;
+  --line: #1f2a3a;
+  --ink: #e7f0ff;
+  --muted: #9fb0c9;
+  --accent: #7c4dff;
+  --danger: #ff5c5c;
+  --good: #00d084;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: radial-gradient(1200px 800px at 50% -200px, rgba(124,77,255,.25), transparent 60%),
+              linear-gradient(#0b0f14, #090e13 60%, #070b0f);
+  color: var(--ink);
+  font: 500 14px/1.4 Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+
+#wrap {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  padding: .5rem .75rem;
+  background: rgba(15,22,35,.7);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 14px;
+  margin: 0 8px 0 0;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #121b2a;
+  color: var(--ink);
+  border-radius: 12px;
+  padding: .45rem .7rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s ease, transform .05s ease;
+}
+
+.btn:hover {
+  background: #202a3a;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.badge {
+  background: rgba(0, 0, 0, .35);
+  border: 1px solid rgba(255, 255, 255, .08);
+  padding: .35rem .55rem;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+#stage {
+  position: relative;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #11161e;
+}
+
+#respawnOverlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(4px);
+  z-index: 99;
+}
+
+.card {
+  background: #101828;
+  border: 1px solid #273142;
+  border-radius: 16px;
+  padding: 20px 30px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,.45);
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: var(--danger);
+}
