@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Drive-ish Test</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>Drive-ish • Test Zone</h1>
+      <button id="fsBtn" class="btn">⛶ Fullscreen</button>
+      <button id="noColBtn" class="btn">🌀 No Collision: OFF</button>
+      <button id="reset" class="btn">↺ Reset</button>
+      <div class="badge">W/↑ gas · S/↓ reverse · A/← D/→ tilt · P pause</div>
+    </header>
+
+    <div id="stage">
+      <canvas id="cvs" width="1280" height="720"></canvas>
+
+      <!-- Respawn Overlay -->
+      <div id="respawnOverlay" hidden>
+        <div class="card">
+          <h2>💥 Car Destroyed</h2>
+          <button id="respawnBtn" class="btn">Respawn</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="driveish.js"></script>
+</body>
+</html>
